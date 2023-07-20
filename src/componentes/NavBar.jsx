@@ -1,17 +1,15 @@
-import logo from '../image/logo.png'
+import logo from '../../public/image/logo.png'
 import { CartWidget } from './CartWidget'
+import { Link } from 'react-router-dom'
+
 export const NavBar = () =>{
     return(
             <nav className="navbar" style={{
                 display:'flex',
                 justifyContent:'space-between',
                 height:'100px',
-                backgroundColor:'#ffff',
+                backgroundColor: 'white',
     
-
-                
-
-                
             }}>
                 <img src={logo} alt="" style={{
                     height:'40px',
@@ -23,10 +21,8 @@ export const NavBar = () =>{
                     listStyle:'None',
                     display:'flex'
                 }}>
-                    <li style={{ padding: '20px',}}><a href="#">Home</a></li>
-                    <li style={{ padding: '20px'}}><a href="#">Products</a></li>
-                    <li style={{ padding: '20px'}}><a href="#">About Us</a></li>
-                    <li style={{ padding: '20px'}}><a href="#">Contact</a></li>
+                    <li style={{ padding: '20px',}}><Link to="/">Home</Link></li>
+                    <li style={{ padding: '20px'}}><Link to="/productos">Products</Link></li> 
                 </ul>
 
                 

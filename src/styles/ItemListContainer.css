@@ -1,0 +1,26 @@
+.contenedorCatalogo{
+    display: flex;
+    padding: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.imagenProducto{
+    height: 300px;
+    width: 300px;
+}
+
+.tarjetaProducto{
+    padding: 100px;
+    
+    
+}
+
+
+.tarjetaProducto h4{
+    text-align: center;
+}
+
+.tarjetaProducto p{
+    text-align: center;
+}

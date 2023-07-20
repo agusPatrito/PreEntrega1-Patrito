@@ -1,6 +1,5 @@
 import { useEffect } from 'react'
-import carrito from '../image/carrito.png'
-    // El useEffect es para que se monte solo al montaje de la pagina.
+import carrito from '../../public/image/carrito.png'
     
 export const CartWidget = () =>{
     const items = []

@@ -1,0 +1,19 @@
+.h1Banner{
+    text-align: center;
+}
+
+
+.bannerDiv{
+    display: flex;
+    align-items: center;
+    margin-left: 100px;
+    margin-right: 100px;
+
+}
+
+.bannerImg{
+    width: 700px;
+    height: 500px;
+    border-radius: 5px;
+    
+}

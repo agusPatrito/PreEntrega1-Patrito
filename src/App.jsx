@@ -1,22 +1,28 @@
 import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import './styles/App.css'
 import {ItemList} from './componentes/ItemListContainer.jsx'
 import { NavBar } from './componentes/NavBar'
 import { CartWidget } from './componentes/CartWidget'
+import {MainBanner} from './componentes/MainBanner'
+import { BrowserRouter, Routes, Route } from 'react-router-dom'
+
+
 
 
 function App() {
   return (
-      <div>
+      <BrowserRouter>
 
         <NavBar/>
+        <Routes>
+          <Route path='/' element={ <MainBanner/> }/>
+          <Route path='/productos' element={<ItemList />}/>
+        </Routes>
+        
 
-        <ItemList name='Agustin'/>
+      </BrowserRouter> 
         
-        
-      </div>
+      
   )
 }
 
