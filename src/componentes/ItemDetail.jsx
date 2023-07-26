@@ -1,7 +1,7 @@
-
+import style from '../styles/ItemListContainer.css'
 export const ItemDetail = ({item}) =>{
     return (
-        <div>
+        <div className='tarjetaProducto'>
             <h4>{item.nombre}</h4>
             <img className='imagenProducto' src={item.img} alt=''/>
             <p>{item.descripcion}</p>
