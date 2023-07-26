@@ -1,0 +1,67 @@
+
+[
+    {
+        "id": 1,
+        "nombre": "Tshirt",
+        "descripcion": "Basic grey tee",
+        "precio": 2000,
+        "img": "../../public/image/tshirt1.png",
+        "categoria": "Ropa"
+    },
+    {
+        "id": 2,
+        "nombre": "Futures Fins",
+        "descripcion": "",
+        "precio": 5000,
+        "img": "../../public/image/fins.png",
+        "categoria": "Gear"
+    },
+    {
+        "id": 3,
+        "nombre": "Omega Shorts",
+        "descripcion": "'Brown beach shorts'",
+        "precio": 3500,
+        "img": "../../public/image/shorts1.png",
+        "categoria": "Ropa"
+    },
+    {
+        "id": 4,
+        "nombre": "surfboard 1",
+        "descripcion": "",
+        "precio": 30000,
+        "img": "../../public/image/surboard1.png",
+        "categoria": "Gear"
+    },
+    {
+        "id": 5,
+        "nombre": "Bodyboard",
+        "descripcion": "",
+        "precio": 30000,
+        "img": "../../public/image/bodyboard.png",
+        "categoria": "Gear"
+    },
+    {
+        "id": 6,
+        "nombre": "Hoodie",
+        "descripcion": "",
+        "precio": 30000,
+        "img": "../../public/image/hoodie1.png",
+        "categoria": "Ropa"
+    },
+    {
+        "id": 7,
+        "nombre": "Shorts",
+        "descripcion": "",
+        "precio": 30000,
+        "img": "../../public/image/shorts2.png",
+        "categoria": "Ropa"
+    },
+    {
+        "id": 8,
+        "nombre": "Surf hat",
+        "descripcion": "",
+        "precio": 30000,
+        "img": "../../public/image/hat1.png",
+        "categoria": "Ropa"
+    }
+]

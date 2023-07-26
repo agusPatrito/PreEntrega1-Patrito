@@ -22,7 +22,9 @@ export const NavBar = () =>{
                     display:'flex'
                 }}>
                     <li style={{ padding: '20px',}}><Link to="/">Home</Link></li>
-                    <li style={{ padding: '20px'}}><Link to="/productos">Products</Link></li> 
+                    <li style={{ padding: '20px'}}><Link to="/productos/Ropa">Ropa</Link></li>
+                    <li style={{ padding: '20px'}}><Link to="/productos/Gear">Gear</Link></li>
+
                 </ul>
 
                 
