@@ -12,6 +12,8 @@
 
 .tarjetaProducto{
     padding: 100px;
+    display: flex;
+    flex-direction: column;
     
     
 }
@@ -23,4 +25,15 @@
 
 .tarjetaProducto p{
     text-align: center;
+}
+
+.botonCompra{
+    border-radius: 0%;
+    align-self: center;
+    color:  black;
+    background-color: white;
+    border-style: solid;
+    border-color: black;
+    width: 100px;
+    height: 50px;
 }

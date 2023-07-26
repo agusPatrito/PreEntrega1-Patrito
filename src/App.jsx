@@ -17,6 +17,7 @@ function App() {
         <Routes>
           <Route path='/' element={ <MainBanner/> }/>
           <Route path='/productos' element={<ItemList />}/>
+          <Route path='/productos/:categoryId' element={<ItemList />}/>
         </Routes>
         
 

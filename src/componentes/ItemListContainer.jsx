@@ -6,9 +6,9 @@ import hoodie from '../../public/image/hoodie1.png'
 import shorts2 from '../../public/image/shorts2.png'
 import bodyboard from '../../public/image/bodyboard.png'
 import hat from '../../public/image/hat1.png'
-
 import { useEffect, useState } from 'react'
 import style from '../../src/styles/ItemListContainer.css'
+import { useParams } from 'react-router-dom'
 
 const MOCK_DATA =[
     {
@@ -17,62 +17,72 @@ const MOCK_DATA =[
         descripcion: 'Basic grey tee',
         precio: 2000,
         img: tshirt1,
+        categoria: 'Ropa',
     },
     {
         id: 2,
         nombre: 'Futures Fins',
         descripcion: '',
         precio: 5000,
-        img: fins
+        img: fins,
+        categoria: 'Gear'
     },
     {
         id: 3,
         nombre: 'Omega Shorts',
         descripcion: 'Brown beach shorts',
         precio: 3500,
-        img: shorts
+        img: shorts,
+        categoria: 'Ropa',
     },
     {
         id: 4,
         nombre: 'surboard 1',
         descripcion: '',
         precio: 30000,
-        img: surfboard
+        img: surfboard,
+        categoria: 'Gear'
     },
     {
         id: 5,
         nombre: 'surboard 1',
         descripcion: '',
         precio: 30000,
-        img: bodyboard
+        img: bodyboard,
+        categoria: 'Gear'
     },
     {
         id: 6,
         nombre: 'surboard 1',
         descripcion: '',
         precio: 30000,
-        img: hoodie
+        img: hoodie,
+        categoria: 'Ropa'
     },
     {
         id: 7,
         nombre: 'surboard 1',
         descripcion: '',
         precio: 30000,
-        img: shorts2
+        img: shorts2,
+        categoria: 'Ropa'
     },
     {
         id: 8,
         nombre: 'surboard 1',
         descripcion: '',
         precio: 30000,
-        img: hat
+        img: hat,
+        categoria: 'Ropa'
     },
 ]
 
 
 export const ItemList = () => {
     const [productos, setProductos] = useState([])
-    console.log(productos)
+    const { categoryId } = useParams()
+
+    
 
     useEffect(() =>{
         const pedirDatos = () =>{
@@ -83,8 +93,12 @@ export const ItemList = () => {
             })
         }
         pedirDatos()
-        .then ((res) =>{
-            setProductos(res)
+        .then ( res => {
+            if (categoryId){
+                setProductos(res.filter(prod => prod.categoria === categoryId))
+            }else{
+                setProductos(res)
+            }
         })
         .catch ((error) =>{
             console.log(error)
@@ -95,11 +109,12 @@ export const ItemList = () => {
         <div className='contenedorCatalogo'>
             {
                 productos.map((prod) => (
-                    <div className='tarjetaProducto'>   
+                    <div className='tarjetaProducto'>
                         <h4>{prod.nombre}</h4>
                         <img className='imagenProducto' src={prod.img} alt='' />
                         <p>{prod.descripcion}</p>
                         <p>Precio:  {prod.precio}</p>
+                        <button className='botonCompra'>Ver mas</button>
 
                     </div>
                 ))   
