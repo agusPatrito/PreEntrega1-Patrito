@@ -37,3 +37,20 @@
     width: 100px;
     height: 50px;
 }
+
+.botonCompra:hover{
+    cursor:pointer
+}
+
+.linkVerMas{
+    color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-self: center;
+    border: solid black;
+    border-width: 1px;
+    width: 140px;
+    height: 45px;
+    
+}

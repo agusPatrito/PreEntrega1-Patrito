@@ -1,4 +1,5 @@
 import style from '../styles/ItemListContainer.css'
+import { ItemCount } from './ItemCount'
 export const ItemDetail = ({item}) =>{
     return (
         <div className='tarjetaProducto'>

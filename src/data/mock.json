@@ -44,7 +44,7 @@
         "id": 6,
         "nombre": "Hoodie",
         "descripcion": "",
-        "precio": 30000,
+        "precio": 10000,
         "img": "../../public/image/hoodie1.png",
         "categoria": "Ropa"
     },
@@ -52,7 +52,7 @@
         "id": 7,
         "nombre": "Shorts",
         "descripcion": "",
-        "precio": 30000,
+        "precio": 5000,
         "img": "../../public/image/shorts2.png",
         "categoria": "Ropa"
     },
@@ -60,7 +60,7 @@
         "id": 8,
         "nombre": "Surf hat",
         "descripcion": "",
-        "precio": 30000,
+        "precio": 2000,
         "img": "../../public/image/hat1.png",
         "categoria": "Ropa"
     }
