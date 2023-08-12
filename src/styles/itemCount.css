@@ -1,5 +1,6 @@
 .itemCount{
     display: flex;  
+    flex-direction: column;
     justify-content: center;
     margin: 10px;
 }
@@ -10,4 +11,10 @@
     color: black;
     border-width: 0.5px;
     width:  40px;
+}
+
+.counter{
+    display: flex;
+    justify-content: center;
+    padding-top: 10px;
 }

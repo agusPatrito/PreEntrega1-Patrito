@@ -1,5 +1,6 @@
 import { useEffect } from 'react'
 import carrito from '../../public/image/carrito.png'
+
     
 export const CartWidget = () =>{
     const items = []

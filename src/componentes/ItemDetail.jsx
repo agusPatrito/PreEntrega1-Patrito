@@ -1,13 +1,24 @@
+import { useEffect, useState } from 'react'
 import style from '../styles/ItemListContainer.css'
 import { ItemCount } from './ItemCount'
 export const ItemDetail = ({item}) =>{
+    const [cantidad, setCantidad] = useState(1)
+
+    const handleAgregar = () =>{
+        console.log('Hola mundo')
+    }
+
     return (
         <div className='tarjetaProducto'>
             <h4>{item.nombre}</h4>
             <img className='imagenProducto' src={item.img} alt=''/>
             <p>{item.descripcion}</p>
             <p>Precio:  {item.precio}</p>
-            <button className="botonCompra">Agregar al carrito</button>
+            <ItemCount
+                max={item.stock}
+                counter={cantidad}
+                setCounter={setCantidad}
+                agregar={handleAgregar}/>
         </div>
     )
 }
