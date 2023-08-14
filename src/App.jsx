@@ -6,12 +6,22 @@ import { CartWidget } from './componentes/CartWidget'
 import {MainBanner} from './componentes/MainBanner'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import { ItemDetailContainer } from './componentes/ItemDetailContainer'
+import { ProveedorCarrito } from './context/contextoCarrito'
+import { CartView } from './componentes/CartView'
+
 
 
 
 
 function App() {
+  
+
+
+
   return (
+
+    <ProveedorCarrito>
+
       <BrowserRouter>
 
         <NavBar/>
@@ -20,12 +30,13 @@ function App() {
           <Route path='/detail/:itemId' element={<ItemDetailContainer/>}></Route>
           <Route path='/productos' element={<ItemList/>}/>
           <Route path='/productos/:categoryId' element={<ItemList/>}/>
+          <Route path='/carro' element={<CartView/>}></Route>
         </Routes>
         
 
       </BrowserRouter> 
-        
-      
+
+    </ProveedorCarrito>
   )
 }
 

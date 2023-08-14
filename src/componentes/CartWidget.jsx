@@ -1,19 +1,20 @@
-import { useEffect } from 'react'
-import carrito from '../../public/image/carrito.png'
+import { useContext, useEffect } from 'react'
+import carritoImg from '../../public/image/carrito.png'
+import { contextoCarrito } from '../context/contextoCarrito'
 
     
 export const CartWidget = () =>{
     const items = []
+    const {carrito} = useContext(contextoCarrito)
     return(
-        
         <div className="carrito-navbar">
-            <img src={carrito} alt="" style={{
+            <img src={carritoImg} alt="" style={{
                 height:'40px',
                 width:'40px',
                 alignContent:'center'
             }}/>
-            <p>0</p>
-            {items}
+            <p>{carrito.length}</p>
+            
         
 
             
