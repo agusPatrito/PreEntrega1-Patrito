@@ -1,28 +1,31 @@
 import { useContext } from "react"
 import { contextoCarrito } from "../context/contextoCarrito"
-import style from '../styles/ItemListContainer.css'
+import style from '../styles/cartview.css'
 
 
 export const CartView = () => {
-    const { carrito, vaciarCarrito, eliminarElemento } = useContext(contextoCarrito);
+    const { carrito, vaciarCarrito, eliminarElemento, totalCompra } = useContext(contextoCarrito);
     
     return (
         <div>
             {
                 carrito.map((item) => (
-                    <div>
-                        <img src={item.img} className="imagenProducto" alt={item.nombre} />
+                    <div className="cartView">
+                        <img src={item.img} className="imagenCarrito" alt={item.nombre} />
                         <h3>{item.nombre}</h3>
                         <p>{item.precio}</p>
                         <p>Cantidad {item.cantidad}</p>
-                        <button onClick={() => eliminarElemento(item.id)}>Eliminar</button>
+                        <button className="botonCarrito" onClick={() => eliminarElemento(item.id)}>Eliminar</button>
+                        <hr />
 
 
                     </div>
                 ))
             }
             <div>
-                <button className="botonCompra" onClick={vaciarCarrito}>Vaciar carrito</button>
+                <h3>Total: ${totalCompra()}</h3>
+                <button className="botonCarrito" onClick={vaciarCarrito}>Vaciar carrito</button>
+
             </div>
         </div>
     )

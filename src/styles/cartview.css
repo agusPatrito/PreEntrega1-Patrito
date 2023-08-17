@@ -1,0 +1,27 @@
+.cartView{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.imagenCarrito{
+    height: 200px;
+    width: 200px;
+}
+
+.botonCarrito{
+    background-color: white;
+    color: black;
+    border: solid black 1px;
+    
+    
+    
+}
+
+.botonCarrito:hover{
+    background-color: rgb(136, 38, 38);
+    color: white;
+    cursor: pointer;
+}
+
