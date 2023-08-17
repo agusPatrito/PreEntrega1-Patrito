@@ -25,3 +25,45 @@
     cursor: pointer;
 }
 
+.confirmarCompra{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.confirmarCompra h3{
+    text-align: center;
+}
+
+
+.botonEliminar{
+    width: 200px;
+    height: 40px;
+    background-color: white;
+    color: black;
+    border: solid black 1px;
+    
+}
+
+.botonEliminar:hover{
+    background-color: rgb(136, 38, 38);
+    color: white;
+    cursor: pointer;
+}
+
+.botonConfirmar{
+    width: 200px;
+    height: 40px;
+    background-color: white;
+    color: black;
+    border: solid black 1px;
+    margin-top: 20px;
+}
+
+
+.botonConfirmar:hover{
+    background-color: rgb(76, 141, 114);
+    color: white;
+    cursor: pointer;
+}

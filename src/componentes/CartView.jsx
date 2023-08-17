@@ -1,13 +1,23 @@
 import { useContext } from "react"
 import { contextoCarrito } from "../context/contextoCarrito"
 import style from '../styles/cartview.css'
-
+import { Link } from "react-router-dom"
 
 export const CartView = () => {
     const { carrito, vaciarCarrito, eliminarElemento, totalCompra } = useContext(contextoCarrito);
+
+    if(carrito.length === 0){
+        return (
+            <div>
+                <h2>Tu carrito esta vacio :/</h2>
+                <Link to='/'>Regresar a la compra</Link>
+            </div>
+        )
+    }
     
     return (
         <div>
+
             {
                 carrito.map((item) => (
                     <div className="cartView">
@@ -17,16 +27,16 @@ export const CartView = () => {
                         <p>Cantidad {item.cantidad}</p>
                         <button className="botonCarrito" onClick={() => eliminarElemento(item.id)}>Eliminar</button>
                         <hr />
-
-
                     </div>
                 ))
             }
-            <div>
-                <h3>Total: ${totalCompra()}</h3>
-                <button className="botonCarrito" onClick={vaciarCarrito}>Vaciar carrito</button>
 
+            <div className="confirmarCompra">
+                <h3>Total: ${totalCompra()}</h3>
+                <button className="botonEliminar" onClick={vaciarCarrito}>Vaciar carrito</button>
+                <button className="botonConfirmar">Confirmar Compra</button>
             </div>
+
         </div>
     )
 
