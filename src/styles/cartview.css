@@ -59,6 +59,12 @@
     color: black;
     border: solid black 1px;
     margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Arial;
+    font-size: 13px;
+
 }
 
 

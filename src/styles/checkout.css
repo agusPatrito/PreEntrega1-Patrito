@@ -1,0 +1,44 @@
+.botonConfirmar{
+    width: 200px;
+    height: 40px;
+    background-color: white;
+    color: black;
+    border: solid black 1px;
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Arial;
+    font-size: 13px;
+
+}
+
+
+.botonConfirmar:hover{
+    background-color: rgb(76, 141, 114);
+    color: white;
+    cursor: pointer;
+}
+
+.checkoutForm{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.inputFormulario{
+    width: 200px;
+    background-color: white;
+    border: solid black 1px;
+    margin: 10px;
+    color: black;
+
+}
+
+.checkout{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
